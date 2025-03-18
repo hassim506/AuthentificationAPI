@@ -22,8 +22,8 @@ class PaymentController extends Controller
 
         $reference = 'CMD-' . time();
         $callback_url = route('paytech.callback');
-        $success_url = 'https://votre-site.com/success';
-        $cancel_url = 'https://votre-site.com/cancel';
+        $success_url = 'https://127.0.0.1:8000/success';
+        $cancel_url = 'https://127.0.0.1:8000/cancel';
 
         $response = $this->payTechService->initiatePayment(
             $request->amount, $reference, $callback_url, $success_url, $cancel_url
