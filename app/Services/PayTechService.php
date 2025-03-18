@@ -17,7 +17,7 @@ class PayTechService
         $this->mode = env('PAYTECH_MODE');
         $this->base_url = $this->mode === 'live'
             ? 'https://api.paytech.sn'
-            : 'https://test.paytech.sn';
+            : '';
     }
 
     public function initiatePayment($amount, $reference, $callback_url, $success_url, $cancel_url)
