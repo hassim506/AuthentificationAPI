@@ -21,7 +21,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'number',
         'password',
+        'adresse',
+        'profile_photo_path',
+        'profils_id',
+        'estactif'
     ];
 
     /**
@@ -32,6 +37,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
+    ];
+     /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array<int, string>
+     */
+    protected $appends = [
+        'profile_photo_url',
     ];
 
     /**
